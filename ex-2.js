@@ -82,3 +82,14 @@ let orders = [
 ];
 
 // Start coding here
+
+let paidJCB = 0;
+let total;
+for (let i = 0; i < orders.length; i++) {
+  if (orders[i].creditCardType === "jcb"){
+     total = orders[i].productPrice * orders[i].productQuantity;
+     paidJCB = paidJCB + total;
+  }
+}
+
+console.log("Paid by JCB credit card amount: " + "(" + paidJCB + ")" + " Baht")
